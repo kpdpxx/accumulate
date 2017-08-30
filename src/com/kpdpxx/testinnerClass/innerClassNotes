@@ -1,0 +1,18 @@
+1：成员内部类的实例需要依赖外部类
+	OutClass.new InnerClass();
+2：成员内部类中的属性定义
+	1：可以定义非静态的变量
+	2：可以定义 static final 的变量
+		/**
+		 * The field name cannot be declared static in a non-static inner type, unless initialized with a constant（常量） expression
+		 */
+	3：不能直接定static 的变量
+3：成员内部类访问外部类的特性
+	可以访问外部类的所以属性。因为内部类隐含着 OutClass.this.xxxx;
+4：增加可读性处理
+	定义获取内部类的方法
+如：public InnerClass1 getInnerClass1(){
+		return new InnerClass1();
+	}
+	
+	
